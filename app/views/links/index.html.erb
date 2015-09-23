@@ -1,3 +1,5 @@
+<%= render 'links/form' %>
+
 <ul>
   <% @links.each do |link| %>
     <li><%= link_to link.url, link.url %> | <%= link.status %> </li>

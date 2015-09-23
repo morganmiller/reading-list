@@ -2,22 +2,15 @@
 
 <div class="row">
   <%= form_for(User.new) do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email,  :placeholder => "email"%>
 
-    <div class="large-12 large-centered columns">
-      <%= f.label :email %>
-      <%= f.text_field :email,  :placeholder => "email"%>
-    </div>
+    <%= f.label :password %>
+    <%= f.password_field :password,  :placeholder => "password"%>
 
-    <div class="large-12 large-centered columns">
-      <%= f.label :password %>
-      <%= f.password_field :password,  :placeholder => "password"%>
-    </div>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation,  :placeholder => "confirm password"%>
 
-    <div class="large-12 large-centered columns">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation,  :placeholder => "confirm password"%>
-    </div>
-
-    <p class= "center"><%= f.submit "Sign up", class:"tiny button radius" %></p>
+    <p class= "center"><%= f.submit "Sign up", class:"button" %></p>
   <% end %>
 </div>

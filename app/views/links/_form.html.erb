@@ -1,0 +1,6 @@
+<%= form_for(:link, url: '/links') do |f| %>
+  <%= f.label :url %>
+  <%= f.text_field :url, placeholder: "Paste your link here"  %>
+
+  <p class= "center"><%= f.submit "Save link", class:"tiny button radius" %></p>
+<% end %>
