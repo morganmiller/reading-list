@@ -3,9 +3,8 @@ require 'rails_helper'
 feature 'unauthenticated user' do
 
   scenario "is redirected to sign up page and can create account" do
-    #change later
     visit '/'
-    # expect(current_path).to eq('/signup')
+    expect(current_path).to eq('/signup')
 
     fill_in "Email", with: "horace@turing.io"
     fill_in "Password", with: "password"
@@ -21,8 +20,8 @@ feature 'unauthenticated user' do
     User.create!(email: "horace@turing.io",
                  password: "password")
 
-    visit '/signup'
-    # expect(current_path).to eq('/signup')
+    visit '/'
+    expect(current_path).to eq('/signup')
 
     fill_in "Email", with: "horace@turing.io"
     fill_in "Password", with: "password"
