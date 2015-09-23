@@ -14,6 +14,7 @@ gem 'bcrypt'
 
 group :development, :test do
   gem 'capybara'
+  gem 'launchy'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
