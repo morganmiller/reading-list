@@ -13,3 +13,17 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+li.link {
+  list-style-type: none;
+}
+
+.link-form {
+  display:inline-block;
+  float:none;
+  /* inline-block space fix */
+  margin-right:-4px;
+}

@@ -13,6 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'validate_url'
+gem 'pismo'
 
 group :development, :test do
   gem 'capybara'

@@ -1,7 +1,10 @@
-<%= render 'links/form' %>
+<div class="container"><div class="row">
+  <%= render 'links/form' %>
 
-<ul>
-  <% @links.each do |link| %>
-    <li><%= link_to link.url, link.url %> | <%= link.status %> </li>
-  <% end  %>
-</ul>
+  <br><br>
+
+  <div class="col-md-6 col-md-offset-3 links">
+    <div id="read"><h1>Read</h1><%= render partial: 'links/read', locals: {links: @read_links} %></div>
+    <div id="unread"><h1>Unread</h1><%= render partial: 'links/unread', locals: {links: @unread_links} %></div>
+  </div>
+</div></div>

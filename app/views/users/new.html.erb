@@ -1,16 +1,18 @@
-<h1>Sign up or <%= link_to "Login", '/login' %></h1>
+<div class="container">
+  <h1>Sign up or <%= link_to "Login", '/login' %></h1>
 
-<div class="row">
-  <%= form_for(User.new) do |f| %>
-    <%= f.label :email %>
-    <%= f.text_field :email,  :placeholder => "email"%>
+  <div class="row">
+    <%= form_for(User.new) do |f| %>
+      <%= f.label :email %>
+      <%= f.text_field :email,  :placeholder => "email"%><br>
 
-    <%= f.label :password %>
-    <%= f.password_field :password,  :placeholder => "password"%>
+      <%= f.label :password %>
+      <%= f.password_field :password,  :placeholder => "password"%><br>
 
-    <%= f.label :password_confirmation %>
-    <%= f.password_field :password_confirmation,  :placeholder => "confirm password"%>
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation,  :placeholder => "confirm password"%><br>
 
-    <p class= "center"><%= f.submit "Sign up", class:"button" %></p>
-  <% end %>
+      <p class= "center"><%= f.submit "Sign up", class:"button" %></p>
+    <% end %>
+  </div>
 </div>

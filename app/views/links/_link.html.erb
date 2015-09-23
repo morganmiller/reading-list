@@ -1,0 +1,5 @@
+<li class="link" data-id=<%= link.id %>>
+  <%= link_to link.url, link.url %> |
+  <%= link.status %> |
+  <%= link_to link.update_text, link_path(link), class: "change-status" %>
+</li>

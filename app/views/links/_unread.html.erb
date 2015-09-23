@@ -1,0 +1,5 @@
+<ul class="unread-links">
+  <% links.each do |link| %>
+    <%= render partial: 'links/link', locals: { link: link } %>
+  <% end  %>
+</ul>

@@ -1,4 +1,4 @@
-<div class="row">
+<div class="container"><div class="row">
   <h1>Login</h1>
   <%= form_for(:session, url: "/login") do |f| %>
     <%= f.label :email %>
@@ -9,4 +9,4 @@
 
     <p class= "center"><%= f.submit "Login", class:"tiny button radius" %></p>
   <% end %>
-</div>
+</div></div>
