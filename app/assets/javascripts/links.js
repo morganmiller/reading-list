@@ -36,7 +36,7 @@ function changeLinkStatus() {
       method: "PUT",
       url: "/links/" + linkId,
       data: {id: linkId}
-    }).then(function(link) {
+    }).success(function(link) {
       linkLi.remove();
       if(clickedText == "Mark read") {
         appendReadLink(link);
