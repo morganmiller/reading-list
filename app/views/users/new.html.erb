@@ -1,10 +1,23 @@
 <h1>Sign up or <%= link_to "Login", '/login' %></h1>
 
-<%= form_for :user, url: '/users' do |f| %>
+<div class="row">
+  <%= form_for(User.new) do |f| %>
 
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Register" %>
+    <div class="large-12 large-centered columns">
+      <%= f.label :email %>
+      <%= f.text_field :email,  :placeholder => "email"%>
+    </div>
 
-<% end %>
+    <div class="large-12 large-centered columns">
+      <%= f.label :password %>
+      <%= f.password_field :password,  :placeholder => "password"%>
+    </div>
+
+    <div class="large-12 large-centered columns">
+      <%= f.label :password_confirmation %>
+      <%= f.password_field :password_confirmation,  :placeholder => "confirm password"%>
+    </div>
+
+    <p class= "center"><%= f.submit "Sign up", class:"tiny button radius" %></p>
+  <% end %>
+</div>

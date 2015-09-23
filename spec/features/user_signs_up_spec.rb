@@ -6,15 +6,15 @@ feature 'unauthenticated user' do
     #change later
     visit '/'
     # expect(current_path).to eq('/signup')
-    save_and_open_page
-    fill_in "Email:", with: "horace@turing.io"
-    fill_in "Password:", with: "password"
-    fill_in "Password Confirmation:", with: "password"
 
-    click_button "Register"
+    fill_in "Email", with: "horace@turing.io"
+    fill_in "Password", with: "password"
+    fill_in "Password confirmation", with: "password"
+
+    click_button "Sign up"
 
     expect(current_path).to eq(root_path)
-    expect(page).to have_content "Welcome horace@turing.io"
+    expect(page).to have_content "Welcome, horace@turing.io"
   end
 
   scenario "can't create account with existing email" do
@@ -26,9 +26,9 @@ feature 'unauthenticated user' do
 
     fill_in "Email", with: "horace@turing.io"
     fill_in "Password", with: "password"
-    fill_in "Password Confirmation", with: "password"
+    fill_in "Password confirmation", with: "password"
 
-    click_button "Register"
+    click_button "Sign up"
 
     expect(current_path).to eq('/signup')
     expect(page).to have_content "Email has already been taken"

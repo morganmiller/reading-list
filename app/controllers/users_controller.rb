@@ -9,7 +9,7 @@ class UsersController < ApplicationController
       flash.notice = "Welcome, #{user.email}"
       redirect_to '/'
     else
-      flash.now[:errors] = user.errors.full_messages.join(", ")
+      flash[:errors] = user.errors.full_messages.join(", ")
       redirect_to '/signup'
     end
   end

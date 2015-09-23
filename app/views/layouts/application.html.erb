@@ -8,6 +8,8 @@
 </head>
 <body>
 <%= render 'shared/nav' %>
+<%= flash[:notice] %>
+<%= flash[:errors] %>
 <%= yield %>
 
 </body>
