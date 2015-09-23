@@ -10,9 +10,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-
-
-
+gem 'bcrypt'
 
 group :development, :test do
   gem 'byebug'
@@ -20,4 +18,3 @@ group :development, :test do
   gem 'spring'
   gem 'rspec-rails'
 end
-
