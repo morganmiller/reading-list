@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'users#new'
+  root 'links#index'
 
   get '/signup' => 'users#new'
   resources :users, only: [:create]
