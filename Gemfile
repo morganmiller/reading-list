@@ -14,6 +14,7 @@ gem 'bcrypt'
 gem 'bootstrap-sass'
 gem 'validate_url'
 gem 'pismo'
+gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'capybara'
