@@ -24,4 +24,5 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'pry-rails'
   gem 'database_cleaner'
+  gem 'selenium-webdriver'
 end
