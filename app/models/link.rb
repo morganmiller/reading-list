@@ -2,7 +2,8 @@ require 'pismo'
 
 class Link < ActiveRecord::Base
   belongs_to :user
-  validates :url, url: true
+  validates :url, presence: true, url: true
+  before_save :set_title
 
   enum status: %w(unread read)
 
@@ -10,8 +11,10 @@ class Link < ActiveRecord::Base
     self.status == "unread" ? "Mark read" : "Mark unread"
   end
 
-  def title
+  private
+
+  def set_title
     page = Pismo::Document.new(url)
-    page.title
+    self.title = page.title
   end
 end

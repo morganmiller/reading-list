@@ -11,12 +11,12 @@ class Seed
   def create_links
     user = User.find_by(email: "mdub@gmail.com")
 
-    link1 = Link.new(url:"https://gist.github.com/worace/0fa8052bfcf983e8722d")
+    link1 = Link.new(url:"http://venturebeat.com/2015/09/23/datastax-partners-with-microsoft-to-improve-cassandra-on-azure/")
     link2 = Link.new(url:"http://www.producthunt.com/tech/ubercommute")
     link3 = Link.new(url:"http://venturebeat.com/")
-    link4 = Link.new(url:"http://github.com/", status: 1)
-    link5 = Link.new(url:"http://soundcloud.com/", status: 1)
-    link6 = Link.new(url:"http://reddit.com/", status: 1)
+    link4 = Link.new(url:"http://venturebeat.com/2015/09/23/microsoft-partners-with-baidu-to-push-windows-10-upgrades-in-china/", status: 1)
+    link5 = Link.new(url:"http://venturebeat.com/2015/09/23/google-launches-beta-of-cloud-dataproc-a-managed-service-for-hadoop-and-spark/", status: 1)
+    link6 = Link.new(url:"http://venturebeat.com/2015/09/23/pebble-unveils-new-pebble-time-round-smartwatch/", status: 1)
 
     user.links << link1
     user.links << link2

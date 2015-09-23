@@ -16,7 +16,7 @@ feature 'Authenticated user' do
     click_on "Save link"
 
     within("#unread") do
-      expect(page).to have_content "http://turing.io"
+      expect(page).to have_content "Turing School of Software & Design"
       expect(page).to have_content "unread"
       expect(page).to have_link "Mark read"
     end
@@ -39,7 +39,7 @@ feature 'Authenticated user' do
     end
 
     within("#read") do
-      expect(page).to have_content "http://turing.io"
+      expect(page).to have_content "Turing School of Software & Design"
       expect(page).to have_link "Mark unread"
     end
   end
