@@ -2,7 +2,7 @@ require 'rails_helper'
 
 feature 'Unauthenticated user' do
 
-  xscenario "is redirected to signup page and can find login" do
+  scenario "is redirected to signup page and can find login" do
     @user = User.create!(email: "horace@turing.io",
                          password: "password",
                          password_confirmation: "password")
